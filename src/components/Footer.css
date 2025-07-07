@@ -1,0 +1,14 @@
+.footer {
+  background-color: #ffffff;
+  border-left: 1px solid #ddd;
+  padding: 20px;
+  height: 100vh;
+  font-size: 14px;
+  color: #555;
+    position: sticky;
+  top: 64px;
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+  background-color: #f6f7f8;
+  padding: 16px 12px;
+}

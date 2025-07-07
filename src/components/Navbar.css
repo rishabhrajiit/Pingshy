@@ -1,0 +1,134 @@
+/* Navbar container – reduced height */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 8px 24px; /* reduced vertical padding */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Left side: Logo + Search */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 48px; /* more space between logo and search bar */
+  margin-left: 20px; /* shift right */
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem; /* slightly smaller */
+  font-weight: 700;
+  color: #0077b6;
+  text-decoration: none;
+}
+
+/* Search */
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 14px;
+  color: #777;
+}
+
+.search-bar {
+  padding: 10px 20px;
+  padding-left: 36px;
+  border-radius: 24px;
+  border: 1px solid #dcdcdc;
+  background-color: #f6f7f8;
+  outline: none;
+  font-size: 15px;
+  width: 450px; /* increased width */
+  transition: 0.3s;
+  color: #222222;
+}
+
+.search-bar:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 0 2px rgba(0, 119, 182, 0.2);
+}
+
+/* Right section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-right: 16px;
+}
+
+/* Base button style – smaller height and font */
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 14px; /* smaller buttons */
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s;
+  border: 1px solid transparent;
+}
+
+/* Wallet & Courses – ghost */
+.nav-button.wallet,
+.nav-button.secondary {
+  background-color: transparent;
+  color: #0077b6;
+  border: none;
+}
+
+.nav-button.wallet:hover,
+.nav-button.secondary:hover {
+  color: #023e8a;
+  border: 1px solid #0077b6;
+  background-color: #ffffff;
+}
+
+/* Create Post – filled */
+.nav-button.orange {
+  background-color: #0077b6;
+  color: #ffffff;
+  border: 1px solid #0077b6;
+}
+.nav-button.orange:hover {
+  background-color: #ffffff;
+  color: #0077b6;
+  border: 1px solid #0077b6;
+}
+
+/* Projects – outline */
+.nav-button.grey {
+  background-color: transparent;
+  color: #222222;
+  border: 1px solid #dcdcdc;
+}
+.nav-button.grey:hover {
+  background-color: #f6f7f8;
+  border-color: #bbbbbb;
+}
+
+/* Login – subtle accent */
+.nav-button.login {
+  background-color: #ff000d;
+  color: #ffffff;
+  border: 1px solid #ff000d;
+}
+.nav-button.login:hover {
+  background-color: #ffffff;
+  color: #ff000d;
+  border: 1px solid #ff000d;
+}

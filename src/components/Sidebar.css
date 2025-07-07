@@ -1,0 +1,40 @@
+
+  .sidebar {
+  position: sticky;
+  top: 64px; /* adjust based on navbar height */
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+  background-color: #f6f7f8;
+  padding: 16px 12px;
+}
+
+
+.sidebar-item {
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  padding: 16px 0;
+  text-align: center;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #e0e0e0;
+}
+.sidebar {
+  align-items: flex-start;
+  padding-left: 24px;
+}
+
+.sidebar-item {
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 12px;
+  font-size: 18px;
+}

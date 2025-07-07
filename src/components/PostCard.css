@@ -1,0 +1,142 @@
+.post-card {
+  background-color: #e9f1f7;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  max-width: 600px;
+  min-height: 460px;
+  margin: auto;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #bbb;
+}
+
+.user-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.name {
+  font-weight: bold;
+  color: #222;
+}
+
+.time {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Header actions */
+.header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.join-btn {
+  background-color: #0079d3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.menu-wrapper {
+  position: relative;
+}
+
+.menu-icon {
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.menu-options {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 120px;
+  font-size: 14px;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu-options div {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.menu-options div:hover {
+  background-color: #f0f0f0;
+}
+
+/* Post Body */
+.post-body {
+  margin-top: 12px;
+  flex-grow: 1;
+}
+
+.image-placeholder {
+  height: 280px;
+  background-color: #ccc;
+  margin-top: 8px;
+  border-radius: 4px;
+}
+
+.counts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Post Footer */
+.post-footer {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.actions {
+  display: flex;
+  gap: 24px;
+  font-size: 18px;
+  color: #333;
+}
+
+.actions svg {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.actions svg:hover {
+  transform: scale(1.2);
+  color: #0077b6;
+}

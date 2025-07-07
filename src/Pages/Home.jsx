@@ -1,11 +1,10 @@
-function Home() {
+const Home = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-green-200">
-      <h1 className="text-4xl font-bold text-purple-700">
-        ✅ Tailwind CSS is Working!
-      </h1>
+    <div style={{ padding: '20px' }}>
+      <h1>Welcome to the Home Page</h1>
+      <p>This is the homepage of your app.</p>
     </div>
   );
-}
+};
 
 export default Home;
