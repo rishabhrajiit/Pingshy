@@ -1,33 +1,33 @@
-/* Navbar container – reduced height */
+/* ==== NAVBAR STYLES ==== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  padding: 8px 24px; /* reduced vertical padding */
+  padding: 8px 24px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
+  height: 64px; /* Fixed height to consistently manage spacing */
 }
 
-/* Left side: Logo + Search */
+/* --- Left side: Logo and Search --- */
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 48px; /* more space between logo and search bar */
-  margin-left: 20px; /* shift right */
+  gap: 48px;
+  margin-left: 20px;
 }
 
-/* Logo */
 .logo {
-  font-size: 1.5rem; /* slightly smaller */
+  font-size: 1.5rem;
   font-weight: 700;
   color: #0077b6;
   text-decoration: none;
+  cursor: pointer;
 }
 
-/* Search */
 .search-wrapper {
   position: relative;
   display: flex;
@@ -49,7 +49,7 @@
   background-color: #f6f7f8;
   outline: none;
   font-size: 15px;
-  width: 450px; /* increased width */
+  width: 450px;
   transition: 0.3s;
   color: #222222;
 }
@@ -59,7 +59,7 @@
   box-shadow: 0 0 0 2px rgba(0, 119, 182, 0.2);
 }
 
-/* Right section */
+/* --- Right side: Action buttons --- */
 .navbar-right {
   display: flex;
   align-items: center;
@@ -67,23 +67,23 @@
   margin-right: 16px;
 }
 
-/* Base button style – smaller height and font */
+/* Base button style */
 .nav-button {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 6px 14px; /* smaller buttons */
+  padding: 6px 14px;
   border-radius: 6px;
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
   text-decoration: none;
-  transition: 0.2s;
+  transition: 0.2s ease;
   border: 1px solid transparent;
 }
 
-/* Wallet & Courses – ghost */
+/* Wallet & Courses – ghost buttons */
 .nav-button.wallet,
 .nav-button.secondary {
   background-color: transparent;
@@ -121,7 +121,7 @@
   border-color: #bbbbbb;
 }
 
-/* Login – subtle accent */
+/* Login – accent */
 .nav-button.login {
   background-color: #ff000d;
   color: #ffffff;

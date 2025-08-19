@@ -1,0 +1,136 @@
+.explore-main-container {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 0 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.explore-header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e9ebee;
+  /* background: #fff; */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.explore-header h1 {
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #222;
+}
+
+.explore-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.explore-tab {
+  padding: 7px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  background: #f6f7f8;
+  font-size: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.explore-tab.active {
+  background: #e9f5ff;
+  color: #0079d3;
+}
+
+.section-block {
+  margin: 26px 0;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 13px;
+}
+
+.row-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.row-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #ecf0f3;
+  padding: 14px 20px;
+  min-width: 280px;
+  max-width: 335px;
+  flex: 1 1 320px;
+  box-shadow: 0 1px 3px rgba(49,54,59,0.04);
+  transition: box-shadow 0.12s;
+}
+
+.row-card:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+
+.row-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 13px;
+  object-fit: cover;
+  background: #f4f6f8;
+}
+
+.row-details {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.row-title {
+  font-size: 1.09rem;
+  font-weight: 590;
+  color: #222;
+  margin-bottom: 3px;
+}
+
+.row-desc {
+  font-size: 0.93rem;
+  color: #444;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.row-members {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.join-btn {
+  border: none;
+  background: #0079d3;
+  color: #fff;
+  border-radius: 24px;
+  padding: 7px 18px;
+  font-weight: 600;
+  font-size: 0.96rem;
+  cursor: pointer;
+  transition: background 0.16s;
+}
+
+.join-btn.joined {
+  background: #f1f3f4;
+  color: #555;
+  border: 1px solid #bbb;
+}
+
+.join-btn:hover:not(.joined) {
+  background: #005fa3;
+}

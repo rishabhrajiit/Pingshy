@@ -1,40 +1,139 @@
-
-  .sidebar {
+.sidebar {
   position: sticky;
-  top: 64px; /* adjust based on navbar height */
+  top: 64px; /* Adjust according to your navbar */
   height: calc(100vh - 64px);
   overflow-y: auto;
   background-color: #f6f7f8;
-  padding: 16px 12px;
+  padding: 16px 12px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-
 
 .sidebar-item {
   font-size: 18px;
   font-weight: 500;
   width: 100%;
-  padding: 16px 0;
-  text-align: center;
+  padding: 12px 16px;
+  text-align: left;
   display: flex;
   gap: 12px;
   align-items: center;
-  justify-content: center;
   color: #222;
   cursor: pointer;
   transition: background 0.2s ease;
+  text-decoration: none;
+  border-radius: 6px;
 }
 
 .sidebar-item:hover {
   background-color: #e0e0e0;
-}
-.sidebar {
-  align-items: flex-start;
-  padding-left: 24px;
+  color: #0079d3;
 }
 
-.sidebar-item {
-  justify-content: flex-start;
-  text-align: left;
-  padding-left: 12px;
-  font-size: 18px;
+.sidebar-item.active {
+  background-color: #e3f2fd;
+  color: #0079d3;
+}
+
+/* Communities section container */
+.sidebar-section {
+  margin-top: 18px;
+  background: #f6f7f8;
+  border-radius: 8px;
+  padding-bottom: 6px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.05);
+  width: 100%;
+}
+
+/* Header of communities section */
+.sidebar-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px 6px 15px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  color: #606770;
+  cursor: pointer;
+  user-select: none;
+}
+
+.sidebar-section-title {
+  user-select: none;
+}
+
+/* Chevron icon rotation */
+.sidebar-chevron {
+  transition: transform 0.25s ease;
+  color: #606770;
+}
+
+.sidebar-chevron.open {
+  transform: rotate(0deg);
+}
+
+.sidebar-chevron:not(.open) {
+  transform: rotate(-90deg);
+}
+
+/* Communities list */
+.sidebar-communities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 8px 6px 8px;
+}
+
+/* Create Community button */
+.sidebar-create-community {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #0079d3;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.sidebar-create-community:hover {
+  background-color: #e6f1fb;
+  color: #005ea4;
+}
+
+/* Each community item */
+.sidebar-community-item {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #222;
+  gap: 10px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-community-item:hover,
+.sidebar-community-item.active {
+  background-color: #e9f5ff;
+  color: #0079d3;
+}
+
+/* Community icon */
+.sidebar-community-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #d9e3ee;
+  flex-shrink: 0;
 }

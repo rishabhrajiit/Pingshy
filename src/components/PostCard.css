@@ -1,3 +1,4 @@
+/* === Card Container === */
 .post-card {
   background-color: #e9f1f7;
   border-radius: 8px;
@@ -6,12 +7,13 @@
   max-width: 600px;
   min-height: 460px;
   margin: auto;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+/* === Post Header === */
 .post-header {
   display: flex;
   justify-content: space-between;
@@ -47,7 +49,7 @@
   color: #666;
 }
 
-/* Header actions */
+/* === Header Actions === */
 .header-actions {
   display: flex;
   gap: 12px;
@@ -76,7 +78,7 @@
 
 .menu-options {
   position: absolute;
-  top: 20px;
+  top: 22px;
   right: 0;
   background: white;
   border: 1px solid #ccc;
@@ -84,7 +86,7 @@
   width: 120px;
   font-size: 14px;
   z-index: 100;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .menu-options div {
@@ -96,7 +98,7 @@
   background-color: #f0f0f0;
 }
 
-/* Post Body */
+/* === Post Body === */
 .post-body {
   margin-top: 12px;
   flex-grow: 1;
@@ -117,26 +119,46 @@
   font-size: 14px;
 }
 
-/* Post Footer */
+/* === Post Footer - Action Buttons === */
 .post-footer {
   margin-top: 16px;
-  display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
 .actions {
   display: flex;
-  gap: 24px;
-  font-size: 18px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 20px;
   color: #333;
+  padding: 0 16px;
 }
 
 .actions svg {
+  flex: 1 1 0;
+  text-align: center;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .actions svg:hover {
   transform: scale(1.2);
   color: #0077b6;
+}
+
+/* === Responsive (optional) === */
+@media (max-width: 640px) {
+  .post-card {
+    padding: 12px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .actions {
+    font-size: 18px;
+    padding: 0 8px;
+  }
 }
