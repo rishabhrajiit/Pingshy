@@ -11,9 +11,9 @@ const posts = [
 
 const Feed = () => {
   const [generalFeed,setGeneralFeed] = useState([]);
-  useEffect(() => {
-    const data = getHeadlines("general")
-  },[])
+  // useEffect(() => {
+  //   const data = getHeadlines("general")
+  // },[])
   return (
     <main className="feed">
       <div className="filter-sort-strip">
