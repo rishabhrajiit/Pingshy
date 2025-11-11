@@ -1,4 +1,4 @@
-export const data = {
+export const dataP = {
     "information": {
         "realTimeArticles": {
             "message": "Real-time news data is only available on paid plans. Free plan has a 12-hour delay. Upgrade your plan here to remove the delay: https://gnews.io/change-plan"

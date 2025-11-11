@@ -29,13 +29,13 @@ const PostCard = ({ post }) => {
   };
 
   return (
-    <div className="post-card">
+    <div className="post-card ">
       <div className="post-header">
         <div className="user-info">
           <div className="avatar"></div>
           <div className="user-meta">
-            <span className="name">u/demoUser</span>
-            <span className="time">2h ago</span>
+            <span className="name">u/{post?.source?.name}</span>
+            <span className="time"><span ></span>{post?.publishedAt.split("T")[0]}</span>
           </div>
         </div>
 
@@ -76,7 +76,15 @@ const PostCard = ({ post }) => {
       <div className="post-body">
         <h3>{post.title}</h3>
         <p>{post.content}</p>
-        <div className="image-placeholder" />
+
+        <div className="w-full flex justify-center">
+          <img
+            src={post.image}
+            alt="description"
+            className="max-w-full h-auto object-contain rounded-lg"
+          />
+        </div>
+
         <div className="counts">
           <span>👍 {post.likes} Likes</span>
           <span>💬 {post.comments} Comments</span>

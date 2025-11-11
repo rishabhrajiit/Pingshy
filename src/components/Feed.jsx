@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PostCard from './PostCard';
 import './Feed.css';
 import { getHeadlines } from '../../utils/headlines';
-
+import { dataP } from '../../utils/pseudo';
 const posts = [
   { id: 1, title: 'Welcome to the homepage', content: 'This is a post', likes: 15, comments: 5 },
   { id: 2, title: 'React Rocks', content: 'React is great for building UIs.', likes: 8, comments: 3 },
@@ -10,10 +10,15 @@ const posts = [
 ];
 
 const Feed = () => {
-  const [generalFeed,setGeneralFeed] = useState([]);
-  // useEffect(() => {
-  //   const data = getHeadlines("general")
-  // },[])
+  const [generalFeed,setGeneralFeed] = useState([...dataP?.articles]);
+  useEffect(() => {
+  const fetchData = async () => {
+    const data = await getHeadlines("general");
+    setGeneralFeed(data);
+  };
+  //fetchData();
+}, []);
+
   return (
     <main className="feed">
       <div className="filter-sort-strip">
@@ -28,7 +33,7 @@ const Feed = () => {
           <option>Most Liked</option>
         </select>
       </div>
-      {posts.map((post) => (
+      {generalFeed?.map((post, index) => (
         <PostCard key={post.id} post={post} />
       ))}
     </main>
