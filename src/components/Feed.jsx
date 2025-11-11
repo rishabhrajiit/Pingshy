@@ -13,7 +13,7 @@ const Feed = () => {
   const [generalFeed,setGeneralFeed] = useState([...dataP?.articles]);
   useEffect(() => {
   const fetchData = async () => {
-    const data = await getHeadlines("general");
+    const data = await getHeadlines("nation");
     setGeneralFeed(data);
   };
   //fetchData();
