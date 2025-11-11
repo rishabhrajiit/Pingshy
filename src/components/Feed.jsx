@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PostCard from './PostCard';
 import './Feed.css';
+import { getHeadlines } from '../../utils/headlines';
 
 const posts = [
   { id: 1, title: 'Welcome to the homepage', content: 'This is a post', likes: 15, comments: 5 },
@@ -9,6 +10,10 @@ const posts = [
 ];
 
 const Feed = () => {
+  const [generalFeed,setGeneralFeed] = useState([]);
+  useEffect(() => {
+    const data = getHeadlines("general")
+  },[])
   return (
     <main className="feed">
       <div className="filter-sort-strip">
