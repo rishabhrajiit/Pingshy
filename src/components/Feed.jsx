@@ -16,7 +16,7 @@ const Feed = () => {
     const data = await getHeadlines("nation");
     setGeneralFeed(data);
   };
-  //fetchData();
+  fetchData();
 }, []);
 
   return (
