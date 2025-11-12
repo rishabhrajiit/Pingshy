@@ -7,8 +7,11 @@ import {
   FaShare,
   FaEllipsisH
 } from 'react-icons/fa';
-
+import useAppStore from '../store/useAppStore';
+import { useNavigate } from 'react-router-dom';
 const PostCard = ({ post }) => {
+  const navigate = useNavigate();
+  const { user } = useAppStore();
   const [menuOpen, setMenuOpen] = useState(false);
 
   // --- Join button states ---
@@ -16,6 +19,9 @@ const PostCard = ({ post }) => {
   const [showPrompt, setShowPrompt] = useState(false);
 
   const handleJoinClick = () => {
+    if(!user){
+      navigate('/login');
+    }
     if (!joined) {
       setShowPrompt(true);
     } else {
