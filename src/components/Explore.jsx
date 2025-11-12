@@ -9,7 +9,7 @@ const recommended = [
     name: "r/funny",
     description: "The best place for humor!",
     members: "64M",
-    icon: "https://styles.redditmedia.com/t5_2qizd/styles/communityIcon_t1yd3clb6r601.png",
+    icon: "/funny.svg",
     category: "Internet Culture",
   },
   {
@@ -17,7 +17,7 @@ const recommended = [
     name: "r/AskReddit",
     description: "Ask anything, answer everything",
     members: "49M",
-    icon: "https://styles.redditmedia.com/t5_2qh33/styles/communityIcon_4r3eku0ok1a91.png",
+    icon: "/question.svg",
     category: "Q&As & Stories",
   },
   {
@@ -25,7 +25,7 @@ const recommended = [
     name: "r/gaming",
     description: "Join the world's largest gamer community",
     members: "44M",
-    icon: "https://styles.redditmedia.com/t5_2qh0y/styles/communityIcon_3i2gqzk901a91.png",
+    icon: "/game.svg",
     category: "Games",
   },
   {
@@ -33,7 +33,7 @@ const recommended = [
     name: "r/worldnews",
     description: "Stay updated on global happenings",
     members: "41M",
-    icon: "https://styles.redditmedia.com/t5_2qh2i/styles/communityIcon_xxx.png",
+    icon: "/news.svg",
     category: "Internet Culture",
   },
   {
@@ -41,7 +41,7 @@ const recommended = [
     name: "r/aww",
     description: "Daily dose of cuteness",
     members: "37M",
-    icon: "https://styles.redditmedia.com/t5_2qh1i/styles/communityIcon_cute.png",
+    icon: "/cute.svg",
     category: "Internet Culture",
   },
 ];
@@ -52,7 +52,7 @@ const moreLikeUPSC = [
     name: "r/news",
     description: "Current events and news stories",
     members: "27M",
-    icon: "https://styles.redditmedia.com/t5_2qh3y/styles/communityIcon_news.png",
+    icon: "/news.svg",
     category: "Internet Culture",
   },
   {
@@ -60,7 +60,7 @@ const moreLikeUPSC = [
     name: "r/science",
     description: "News from the world of science",
     members: "29M",
-    icon: "https://styles.redditmedia.com/t5_2qh33/styles/communityIcon_science.png",
+    icon: "/science.svg",
     category: "Q&As & Stories",
   },
   {
@@ -68,7 +68,7 @@ const moreLikeUPSC = [
     name: "r/relationship_advice",
     description: "Ask for advice here",
     members: "15M",
-    icon: "https://styles.redditmedia.com/t5_2qhec/styles/communityIcon_relationship.png",
+    icon: "/relationship.svg",
     category: "Q&As & Stories",
   },
 ];

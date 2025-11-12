@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import communityPic from "../../public/community.svg";
 const SubredditJoinButton = () => {
   const [joined, setJoined] = useState(false);
   const [showPrompt, setShowPrompt] = useState(false);
@@ -41,8 +41,8 @@ const SubredditJoinButton = () => {
         <div style={backdropStyle}>
           <div style={modalStyle}>
             <img
-              src="https://styles.redditmedia.com/t5_6e8xh/styles/communityIcon_5mr8w6yvt0ta1.png"
-              alt="Community Icon"
+              src="/community.svg"
+              alt="Commun"
               style={{ width: 80, height: 80, borderRadius: '50%', marginBottom: 14 }}
             />
             <h2 style={{ textAlign: 'center', fontSize: 22, margin: 0, marginBottom: 10 }}>

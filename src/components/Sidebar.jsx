@@ -10,25 +10,25 @@ const joinedCommunities = [
   {
     id: 'developersIndia',
     name: 'r/developersIndia',
-    icon: 'https://styles.redditmedia.com/t5_33crr/styles/communityIcon_developersIndia.png',
+    icon: '/developer.svg',
     to: '/r/developersIndia',
   },
   {
     id: 'KitchenConfidential',
     name: 'r/KitchenConfidential',
-    icon: 'https://styles.redditmedia.com/t5_2qh1i/styles/communityIcon_cook.png',
+    icon: '/chef.svg',
     to: '/r/KitchenConfidential',
   },
   {
     id: 'travel',
     name: 'r/travel',
-    icon: 'https://styles.redditmedia.com/t5_2qh7y/styles/communityIcon_travel.png',
+    icon: '/travel.svg',
     to: '/r/travel',
   },
   {
     id: 'UPSC',
     name: 'r/UPSC',
-    icon: 'https://styles.redditmedia.com/t5_32qzv/styles/communityIcon_upsc.png',
+    icon: '/upsc.svg',
     to: '/r/UPSC',
   },
 ];
@@ -37,7 +37,7 @@ const Sidebar = () => {
   const [communitiesOpen, setCommunitiesOpen] = useState(true);
 
   return (
-    <div className="sidebar">
+    <div className="w-[17vw] ">
       <NavLink to="/" className="sidebar-item" end>
         <FaHome /> Home
       </NavLink>

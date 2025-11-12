@@ -105,12 +105,12 @@ const PostCard = ({ post }) => {
         <div className="join-modal-backdrop">
           <div className="join-modal">
             <img
-              src="https://styles.redditmedia.com/t5_6e8xh/styles/communityIcon_5mr8w6yvt0ta1.png"
+              src="/community.svg"
               alt="Community Icon"
               style={{ width: 80, height: 80, borderRadius: '50%', marginBottom: '14px' }}
             />
             <h2 style={{ textAlign: 'center', margin: 0, marginBottom: '10px', fontSize: '22px' }}>
-              r/indiafitchecks
+              {post?.source?.name}
             </h2>
             <div
               style={{
@@ -123,7 +123,7 @@ const PostCard = ({ post }) => {
                 fontSize: '16px',
               }}
             >
-              Welcome to our community, <b>u/Powerful-Leg-7920</b>!
+              Welcome to our community, <b>u/{post?.source?.name}</b>!
               <div style={{ fontSize: '12px', color: '#666', marginTop: '4px' }}>
                 – r/indiafitchecks Mod Team
               </div>

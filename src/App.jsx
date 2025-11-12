@@ -32,7 +32,7 @@ const App = () => {
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <div className="main-layout">
         <Sidebar />
-        <div className="feed-wrapper">
+        <div className="feed-wrapper w-[60vw] px-5">
           <Routes>
             <Route path="/" element={<Feed />} />
             <Route path="/popular" element={<Popular />} />
