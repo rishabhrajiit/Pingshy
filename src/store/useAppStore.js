@@ -8,7 +8,7 @@ const useAppStore = create(
         // ---------- Global States ----------
         user: null,
         theme: 'light',
-        notifications: [],
+        userData: {},
 
         // ---------- Actions ----------
         setUser: (userData) => set({ user: userData }),
@@ -20,15 +20,15 @@ const useAppStore = create(
             theme: state.theme === 'light' ? 'dark' : 'light',
           })),
 
-        addNotification: (msg) =>
+        addData: (msg) =>
           set((state) => ({
-            notifications: [...state.notifications, msg],
+            userData: {...state.userData, msg},
           })),
 
-        clearNotifications: () => set({ notifications: [] }),
+        clearData: () => set({ notifications: [] }),
       }),
       {
-        name: 'app-storage', // key in localStorage
+        name: 'pingshy-app-storage', // key in localStorage
       }
     )
   )
