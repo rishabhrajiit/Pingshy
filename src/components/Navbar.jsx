@@ -5,13 +5,13 @@ import {
   FaSearch, FaUser, FaWallet,
   FaUserGraduate, FaPlus, FaFolderOpen
 } from 'react-icons/fa';
-
+import useAppStore from '../store/useAppStore';
 const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
   const handleLogout = () => {
-    localStorage.removeItem('isLoggedIn');
+    setUser(null);
     setIsLoggedIn(false);
   };
-
+  const { user, setUser } = useAppStore();
   return (
     <nav className="navbar">
       {/* Left side: Logo + Search */}
