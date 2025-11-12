@@ -9,14 +9,15 @@ import Popular from './components/Popular';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Explore from './components/Explore';
-
+import useAppStore from './store/useAppStore';
 import './App.css';
 
 const App = () => {
+  const { user } = useAppStore();
   const location = useLocation();
   const isAuthPage = location.pathname === '/login' || location.pathname === '/signup';
 
-  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
+  const [isLoggedIn, setIsLoggedIn] = useState(user !== null);
 
   useEffect(() => {
     localStorage.setItem('isLoggedIn', isLoggedIn.toString());
