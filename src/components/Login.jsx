@@ -1,12 +1,37 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import './Login.css';
-
+import { auth, googleProvider } from '../../utils/firebaseApp';
+import { signInWithPopup } from 'firebase/auth';
+import useAppStore from '../store/useAppStore';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
 const Login = ({ setIsLoggedIn }) => {
+  const loginSuccess = () => toast.success('Logging in', {
+    position: "top-left",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    transition: Bounce,
+  });
+  const logginError = () => toast.error('Error logging in', {
+    position: "top-left",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    transition: Bounce,
+  })
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-
+  const { user, setUser } = useAppStore();
   const handleLogin = (e) => {
     e.preventDefault();
     if (username && password) {
@@ -18,12 +43,30 @@ const Login = ({ setIsLoggedIn }) => {
     }
   };
 
-  const handleGmailLogin = () => {
-    alert('🚀 Gmail login integration goes here (Firebase, OAuth2)');
+  const handleGmailLogin = async () => {
+    try {
+      const result =await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+      console.log(user);
+      setUser(user);
+      loginSuccess();
+      setIsLoggedIn(true);
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+      logginError();
+    }
   };
-
+  useEffect(() => {
+    if (user) {
+      navigate('/');
+    }
+  }, [user]);
   return (
     <div className="login-container">
+      <ToastContainer
+      
+      />
       <div className="auth-card">
         <h2>Login</h2>
         <form className="login-form" onSubmit={handleLogin}>
