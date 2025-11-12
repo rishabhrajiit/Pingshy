@@ -5,7 +5,6 @@ export const getHeadlines = async(category) => {
         console.log(result);
         return result?.data?.articles;
     } catch (error) {
-        console.log(error);
-        
+        console.log(error);   
     }
 }
